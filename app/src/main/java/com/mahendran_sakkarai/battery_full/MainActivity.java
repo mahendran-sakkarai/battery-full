@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void goToSettings() {
-        Intent settingIntent = new Intent(this, SettingsActivity.class);
+        Intent settingIntent = new Intent(this, AlarmActivity.class);
         startActivity(settingIntent);
     }
 }

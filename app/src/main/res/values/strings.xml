@@ -59,4 +59,5 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="battery_full">Battery is full. Please unplug the charger.</string>
 </resources>
