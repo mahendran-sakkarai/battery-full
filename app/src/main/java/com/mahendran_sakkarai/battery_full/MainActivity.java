@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        startTrackingService();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
@@ -23,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
                     goToSettings();
                 }
             });
+        }
+    }
+
+    private void startTrackingService() {
+        if (Utils.isConnected(this)) {
+            startService(new Intent(this, BatteryTrackingService.class));
         }
     }
 
